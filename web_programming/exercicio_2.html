@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Reserva de Quartos do Hotel PW</h1>
+
+    <form action="">
+        <label for="name">Nome Completo:</label>
+        <input type="text" name="name" id="name" placeholder="Nome e Sobrenome">
+        <br>
+        <br>
+
+        <label for="email">Endereço de E-mail:</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <br>
+
+        <label for="date">Data de Chegada:</label>
+        <input type="date" name="date" id="date">
+        <br>
+        <br>
+
+        <label for="num_noites">Número de noites (Cada noite custa R$99,00)</label>
+        <input type="number" name="num_noites" id="num_noites" min="1" max="30" value="1">
+        <br>
+        <br>
+
+        <label for="num_convidados">Número de Convidados (Cada convidado adicional custa R$10,00 por noite)</label>
+        <input type="number" name="num_convidados" id="num_convidados" value="1">
+        <br>
+        <br>
+
+        <b>Orçamento estimado: R$99,00</b>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <label for="name">Código de Promoção</label>
+        <input type="text" name="text" id="text" minlength="6" maxlength="6">
+    </form>
+        <input type="submit" class="submit_button" value="Fazer Reserva">
+</body>
+</html>
