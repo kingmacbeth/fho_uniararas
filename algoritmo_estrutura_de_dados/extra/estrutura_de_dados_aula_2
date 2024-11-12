@@ -1,0 +1,56 @@
+Estruturas Lineares
+- Pilha
+- Fila
+- Lista
+- Deque
+- Cormen
+
+Operacoes Fundamentais
+- Insercao: adicionar elementos na estrutura
+- Acesso  : leitura/consulta de elementos
+- Remocao : retirar elementos da estrutura
+
+Operacoes da Pilha (Fundamentais)
+- push  (p, elemento) : inserimos um novo topo
+- top   (p)           : retorna o elemento que se encontra no topo
+- pop   (p)           : retira o elemento do topo
+
+
+Na pilha todas as operacoes sao realizadas no topo!
+
+Ponteiro => Topo
+Topo < 0 = Pilha Vazia
+
+Exemplo codigo:
+
+struct pilha {
+  int topo;
+  int v[10];
+};
+
+void push(pilha p, int novoElemento){
+  p.topo ++;
+  p.v[p.topo] = novoElemento;
+}
+
+int top(pilha p){
+  return p.v[p.topo];
+}
+
+void pop(pilha p){
+  p.topo--;
+}
+
+int main(){
+  pilha s;
+  s.topo = -1;
+  push(s, 2);
+  push(s, 3);
+  push(s, 4);
+  pop(s);
+  top(s);
+
+  return 0;
+}
+
+

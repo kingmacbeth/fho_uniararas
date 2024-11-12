@@ -1,0 +1,25 @@
+using namespace std;
+
+int soma(int a, int b){
+	return a + b;
+}
+
+int main(){
+
+	int x, y, w;
+
+	cout << "Digite o valor de y e de w: ";
+	cin >> y >> w;
+
+	x = soma(3, 4);
+	cout << "O resultado de x: " << x << endl; 
+	
+	x = soma(y, w);
+	cout << "O novo resultado de x:" << x << endl;
+
+	x = soma(y, w) / 2 + 3;
+	cout << "O resultado da expressao de x: " << x << endl;
+
+
+	return 0;
+}

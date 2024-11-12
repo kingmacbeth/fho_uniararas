@@ -1,0 +1,115 @@
+Estrutura de Dados
+
+Materia que ira possibilitar melhorar conceitos de progrmacao
+Iremos aprender novas tecnicas.
+
+Estruturas nao convencionais => Base para construirmos solucoes mais avancadas.
+
+==========
+Estruturas lineares => Estruturas das quais temos a organizacao de um elemento preceder o outro e suceder o outro.
+Se removo um elemento ele preenche aquele espaco que foi desocupado.
+
+
+Ex. Conjunto numerico de RA de alunos. Pode ser organizado dentro de uma lista. Nao existem buracos dentro de estruturas de dados lineares.
+
+==========
+Neste primeiro bimestre iremos estudar Listas, Pilhas e Filas.
+Vetores ou Ponteiros.
+
+No segundo bimestre iremos estudar estruturas nao lineares -> Arvores.
+Ordenacao
+==========
+
+- Funcao
+- Dados Estruturados
+
+Procedimento de ensino:
+- Aula pratica
+- IDE Livre
+
+P1: 04/10
+P2: 06/12
+
+Seminario1: 27/09
+Seminario2: 29/11
+
+Bibliografia
+- Cormen
+
+==========
+
+Funcoes: Trechos de programas que sao solucoes genericas
+A funcao tem um tipo de retorno podendo ser int, double, char, float, vetor, void
+void para uma funcao que nao retorna nada.
+
+<tipo de retorno><nome>(<lista de argumentos>){
+	corpo da funcao
+}
+
+Exemplo:
+
+int soma(int a, int b){
+	return a + b;	
+}
+
+
+
+tipo void sao funcoes especiais que nao retornam valores
+
+para ler um vetor colocamos ele em um for loop
+
+for(int i = 0; i < x; i++){
+	cin >> a[i];
+}
+
+podemos encapsular essa logica de leitura de um vetor para colocarmos
+em uma funcao
+
+// Nao tem retorno pois modifica uma estrutura
+void LeitorDeVetor(int tamanho, int vetor[]){
+
+	
+	for(int i = 0; i < tamanho; i++){
+		cout << "Posicao " << i << ": ";
+		cin >> vetor[i];
+	{
+}
+
+void ImprimeVetor(int tamanho, int vetor[]){
+	for(int i = 0; i < tamanho; i++){
+		cout << "Posicao " << i << " : " << v[i] << endl;
+	}
+}
+
+int main(){
+	int a[5];
+	LeitorDeVetor(a, 5);
+	ImprimeVetor(a, 5);	
+
+	return 0;
+}
+
+
+=========
+posso criar um tipo utilizando a keyword struct
+- Estudar struct
+
+struct aluno{
+	float nota;
+	int ra;
+	char nome[50];
+	char turma;
+}
+
+
+aluno a1;
+aluno a2;
+
+*Alterar um field*
+
+a1.nota = 3;
+a2.ra = 10214;
+
+PROXIMA AULA
+exercicios com struct
+
