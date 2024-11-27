@@ -15,9 +15,9 @@ app.secret_key = os.getenv("FLASK_SECRET")
 
 oauth = OAuth(app)
 oauth.register(
-    "hrApp",
-    client_id=os.getenv("HR_OAUTH2_CLIENT_ID"),
-    client_secret=os.getenv("HR_OAUTH2_CLIENT_SECRET"),
+    "crmApp",
+    client_id=os.getenv("CRM_OAUTH2_CLIENT_ID"),
+    client_secret=os.getenv("CRM_OAUTH2_CLIENT_SECRET"),
     client_kwargs={
         "scope": "openid profile email",
         "code_challenge_method": "S256"
@@ -37,17 +37,17 @@ def home():
 
 @app.route("/callback")
 def callback():
-    token = oauth.hrApp.authorize_access_token()
+    token = oauth.crmApp.authorize_access_token()
     session["user"] = token
 
-    return render_template("ponto.html")
+    return render_template("crm.html")
 
 
 @app.route("/login")
 def login():
     if "user" in session:
         abort(404)
-    return oauth.hrApp.authorize_redirect(
+    return oauth.crmApp.authorize_redirect(
         redirect_uri=url_for("callback", _external=True)
     )
 
@@ -77,4 +77,4 @@ def loggedout():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=os.getenv("HR_FLASK_PORT"), debug=True)
+    app.run(host="0.0.0.0", port=os.getenv("CRM_FLASK_PORT"), debug=True)
