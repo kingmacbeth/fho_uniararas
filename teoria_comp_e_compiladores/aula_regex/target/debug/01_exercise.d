@@ -1,0 +1,1 @@
+/Users/vntregc/FHO/fho_uniararas/teoria_comp_e_compiladores/aula_regex/target/debug/01_exercise: /Users/vntregc/FHO/fho_uniararas/teoria_comp_e_compiladores/aula_regex/src/bin/01_exercise.rs /Users/vntregc/FHO/fho_uniararas/teoria_comp_e_compiladores/aula_regex/src/lib.rs
